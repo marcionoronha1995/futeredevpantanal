@@ -10,6 +10,9 @@ img {
     transition: transform .2s; /* Animation */
     align-items:self-end;
     margin: 0 auto;
+    box-shadow: 1px 1px 10px black;
+
+    margin: 1px;
 
     border-style:outset;
     border-radius: 5px;
@@ -22,7 +25,9 @@ img {
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.1); 
   box-shadow: 1px 1px 10px black;
+
   margin: 1px;
+
   border-style:outset;
   border-radius: 5px;
 
