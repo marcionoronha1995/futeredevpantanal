@@ -4,4 +4,26 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid white;
+    object-fit: cover;
   }  
+  .zoom {
+    transition: transform .2s; /* Animation */
+    align-items:self-end;
+    margin: 0 auto;
+
+    border-style:outset;
+    border-radius: 5px;
+
+ 
+  }
+  
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.1); 
+  box-shadow: 1px 1px 10px black;
+  margin: 1px;
+  border-style:outset;
+  border-radius: 5px;
+
+  }
