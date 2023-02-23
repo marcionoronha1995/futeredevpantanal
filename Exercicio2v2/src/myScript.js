@@ -10,6 +10,11 @@ document.getElementById('imagem1').src=foto1;
 document.getElementById('imagem2').src=foto2;
 document.getElementById('imagem3').src=foto3;
 document.getElementById('imagem4').src=foto4;
+document.getElementById('imagem-autor').src=foto1;
+document.getElementById('imagem1-modal').src=foto1;
+document.getElementById('imagem2-modal').src=foto2;
+document.getElementById('imagem3-modal').src=foto3;
+document.getElementById('imagem4-modal').src=foto4;
 
 function fotogrande () {
 
