@@ -16,9 +16,4 @@ document.getElementById('imagem2-modal').src=foto2;
 document.getElementById('imagem3-modal').src=foto3;
 document.getElementById('imagem4-modal').src=foto4;
 
-function fotogrande () {
 
-    console.log(foto1)
-    window.open(foto1)
-
-};
