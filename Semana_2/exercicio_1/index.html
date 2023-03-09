@@ -15,23 +15,67 @@
   </div>
 </body>
 <script>
+   let minhadade
+   let minhaaltura
+   let meupeso
+   let resultadodoimc
+   let alertadoimc
     // Não se preocupe em fazer um formulário, esta página já está funcional 
    const calculate = document.getElementById('submit')
     // Crie a sua lógica a partir deste ponto
     // Adicione seu array aqui
+    
 
    calculate.addEventListener('click', () => {
       // Esse document.getElementById, possui a informação dos inputs, capture ele utilizando uma variável
       // Exemplo: let minhaVar = document.getElementById
       // console.log(minhaVar) --> valor do document.getElement
 
-      var idade = document.getElementById('age').value 
-      var altura = document.getElementById('height').value
-      var peso = document.getElementById('weight').value
+      minhaidade = document.getElementById('age').value 
+      minhaaltura = document.getElementById('height').value
+      minhaaltura = minhaaltura/100
+      meupeso = document.getElementById('weight').value
+      resultadodoimc = meupeso / (minhaaltura*minhaaltura)
+      resultadodoimc = parseFloat(resultadodoimc.toFixed(1))
+
+      switch(true){
+      case (resultadodoimc >= 3):
+        alertadoimc = ' Magreza grave maior que 38';
+        break; 
+      case (resultadodoimc >= 3):
+        alertadoimc = ' Magreza grave maior que 38';
+        break; 
+      case (resultadodoimc >= 3):
+        alertadoimc = ' Magreza grave maior que 38';
+        break; 
+      case (resultadodoimc >= 3):
+        alertadoimc = ' Magreza grave maior que 38';
+        break; 
+      case (resultadodoimc >= 3):
+        alertadoimc = ' Magreza grave maior que 38';
+        break; 
+      case (resultadodoimc >= 3):
+        alertadoimc = ' Magreza grave maior que 38';
+        break; 
+      case (resultadodoimc >= 3):
+        alertadoimc = ' Magreza grave maior que 38';
+        break; 
+      case (resultadodoimc >= 3):
+        alertadoimc = ' Magreza grave maior que 38';
+        break; 
+      case (resultadodoimc >= 3):
+        alertadoimc = ' Magreza grave maior que 38';
+        break; 
+
+    }
+
+      
 
       // Adicione o objeto a ser preenchido aqui
     
-    alert('Resultado IMC'+'Com a idade de '+idade+', altura '+altura+' e o peso atual de ' +peso)
+    alert('Seu IMC é '+resultadodoimc+' ,você está na faixa de '+alertadoimc)
+
+    return minhaaltura,minhaidade,meupeso,resultadodoimc,alertadoimc
   })
 </script>
 </html>
