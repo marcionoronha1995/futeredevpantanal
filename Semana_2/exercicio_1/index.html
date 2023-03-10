@@ -1,8 +1,10 @@
 <html lang="pt-br">
   <p>Coloque os seus dados na calculadora e calcule o seu IMC:</p>
+
   <div class="field-age"> <label>Idade</label>
   </div>
   <input type="number" name="age" text="Idade" placeholder="Ex: 35" maxlength="200" id="age"  min="0" max="119"> <span class="caption">anos</span>
+
   <div class="field-height"> <label>Altura</label>
   </div>
   <input type="number" name="height" text="Altura" placeholder="Ex: 165" maxlength="200" id="height" min="0" max="225"> <span class="caption">cm</span>
@@ -13,13 +15,19 @@
     <input type="button" id="submit" name="calculate" value="Calcular">
   </div>
   </div>
+  <div>
+    <p id="mensagemsistema"></p>
+  </div>
 </body>
 <script>
-   let minhadade
-   let minhaaltura
-   let meupeso
-   let resultadodoimc
-   let alertadoimc
+   let minhaidade;
+   let minhaaltura;
+   let meupeso;
+   let resultadodoimc;
+   let alertadoimc;
+   const tabeladedadosdigitados = [];
+   const objetocomdados = {};
+   let n;
     // Não se preocupe em fazer um formulário, esta página já está funcional 
    const calculate = document.getElementById('submit')
     // Crie a sua lógica a partir deste ponto
@@ -34,8 +42,10 @@
 
       minhaidade = document.getElementById('age').value 
       minhaaltura = document.getElementById('height').value
-      minhaaltura = minhaaltura/100
       meupeso = document.getElementById('weight').value
+
+
+      minhaaltura = minhaaltura/100
       resultadodoimc = meupeso / (minhaaltura*minhaaltura)
       resultadodoimc = parseFloat(resultadodoimc.toFixed(1))
 
@@ -81,9 +91,23 @@
 
       // Adicione o objeto a ser preenchido aqui
     
-    alert('Seu IMC é '+resultadodoimc+' ,você está na faixa de '+alertadoimc)
+    alert('Seu IMC é '+resultadodoimc+' ,você está na faixa de '+alertadoimc);
+    document.getElementById("mensagemsistema").innerHTML = 'IMC ${resultadodoimc}';
+    console.log('dados digitados .... '+minhaidade,minhaaltura,meupeso,resultadodoimc,alertadoimc);
 
-    return minhaaltura,minhaidade,meupeso,resultadodoimc,alertadoimc
+    tabeladedadosdigitados["colage"]=minhaidade;
+    tabeladedadosdigitados["colheight"]=minhaaltura;
+    tabeladedadosdigitados["colweight"]=meupeso;
+    tabeladedadosdigitados["colimc"]=resultadodoimc;
+    tabeladedadosdigitados["colfaixa"]=alertadoimc;
+
+
+    console.log(tabeladedadosdigitados);
+    console.log(objetocomdados);
+
+
+
+    return minhaaltura,minhaidade,meupeso,resultadodoimc,alertadoimc;
   })
 </script>
 </html>
