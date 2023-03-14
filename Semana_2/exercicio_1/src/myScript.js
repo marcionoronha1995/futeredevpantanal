@@ -96,15 +96,15 @@ calculate.addEventListener('click', () => {
 
 
 
-dados_tabela.tab_altura = minhaaltura;
-dados_tabela.tab_idade = minhaidade;
-dados_tabela.tab_peso = meupeso;
-dados_tabela.tab_imc = resultadodoimc;
-dados_tabela.tab_alerta = alertadoimc;
+// dados_tabela.tab_altura = minhaaltura;
+// dados_tabela.tab_idade = minhaidade;
+// dados_tabela.tab_peso = meupeso;
+// dados_tabela.tab_imc = resultadodoimc;
+// dados_tabela.tab_alerta = alertadoimc;
 
-tabela.push({ dados_tabela: { tab_altura: string, tab_idade: string, tab_peso: string, tab_imc: string, tab_alerta: string, }, }[]): number;
+// tabela.push({ dados_tabela: { tab_altura: string, tab_idade: string, tab_peso: string, tab_imc: string, tab_alerta: string, }, }[]): number;
 
-tabela.push()
+// tabela.push()
 
 // push(...items: { dados_tabela: { tab_altura: string; tab_idade: string; tab_peso: string; tab_imc: string; tab_alerta: string; }; }[]): number
 // New elements to add to the array.
