@@ -1,4 +1,6 @@
 <html lang="pt-br">
+  <body>
+
   <p>Coloque os seus dados na calculadora e calcule o seu IMC:</p>
 
   <div class="field-age"> <label>Idade</label>
@@ -27,6 +29,13 @@
    let alertadoimc;
    const tabeladedadosdigitados = [];
    const objetocomdados = {};
+   const quadrodedados = [
+    {col_age},
+    {col_height},
+    {col_weight},
+    {col_imc},
+    {col_imcresult}
+  ];
    let n;
     // Não se preocupe em fazer um formulário, esta página já está funcional 
    const calculate = document.getElementById('submit')
