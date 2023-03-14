@@ -102,7 +102,7 @@ dados_tabela.tab_peso = meupeso;
 dados_tabela.tab_imc = resultadodoimc;
 dados_tabela.tab_alerta = alertadoimc;
 
-push({ dados_tabela: { tab_altura: string, tab_idade: string, tab_peso: string, tab_imc: string, tab_alerta: string, }, }[]): number;
+tabela.push({ dados_tabela: { tab_altura: string, tab_idade: string, tab_peso: string, tab_imc: string, tab_alerta: string, }, }[]): number;
 
 tabela.push()
 
@@ -110,7 +110,7 @@ tabela.push()
 // New elements to add to the array.
 
 
-Appends new elements to the end of an array, and returns the new length of the array.
+// Appends new elements to the end of an array, and returns the new length of the array.
 console.log(dados_tabela);
 console.log(tabela);
 console.table(tabela);
