@@ -18,7 +18,9 @@ let alertadoimc;
         tab_imc:"",
         tab_alerta:""};
 
-    const tabela = [{dados_tabela}]
+    const tabela = [dados_tabela]
+
+    const table_data = [dados_tabela]
 
 
     
@@ -96,11 +98,7 @@ calculate.addEventListener('click', () => {
 
 
 
-// dados_tabela.tab_altura = minhaaltura;
-// dados_tabela.tab_idade = minhaidade;
-// dados_tabela.tab_peso = meupeso;
-// dados_tabela.tab_imc = resultadodoimc;
-// dados_tabela.tab_alerta = alertadoimc;
+
 
 // tabela.push({ dados_tabela: { tab_altura: string, tab_idade: string, tab_peso: string, tab_imc: string, tab_alerta: string, }, }[]): number;
 
@@ -110,11 +108,21 @@ calculate.addEventListener('click', () => {
 // New elements to add to the array.
 
 
+
+
 // Appends new elements to the end of an array, and returns the new length of the array.
-console.log(dados_tabela);
-console.log(tabela);
-console.table(tabela);
-console.table(dados_tabela);
+
+dados_tabela.tab_altura = minhaaltura;
+dados_tabela.tab_idade = minhaidade;
+dados_tabela.tab_peso = meupeso;
+dados_tabela.tab_imc = resultadodoimc;
+dados_tabela.tab_alerta = alertadoimc;
+
+table_data.push(dados_tabela);
+
+
+
+console.table(table_data)
 
 
 
