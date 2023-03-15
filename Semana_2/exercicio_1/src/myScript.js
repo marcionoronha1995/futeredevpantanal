@@ -12,15 +12,13 @@ let alertadoimc;
     // Adicione seu array aqui
 
     const dados_tabela = {
-        tab_altura:"",
-        tab_idade:"",
-        tab_peso:"",
-        tab_imc:"",
-        tab_alerta:""};
+        tab_altura:minhaaltura,
+        tab_idade:minhaidade,
+        tab_peso:meupeso,
+        tab_imc:resultadodoimc,
+        tab_alerta:alertadoimc};
 
-    const tabela = [dados_tabela]
-
-    const table_data = [dados_tabela]
+    const tabela = [];
 
 
     
@@ -77,9 +75,7 @@ calculate.addEventListener('click', () => {
       alertadoimc = ' Obesidade Grau III (considerada mórbida)';
       break; 
    
-  }
-
-    
+  }    
 
     // Adicione o objeto a ser preenchido aqui
   
@@ -87,47 +83,25 @@ calculate.addEventListener('click', () => {
     document.getElementById("mensagemsistema").innerHTML = 'IMC ${resultadodoimc}';
     console.log('dados digitados .... '+minhaidade,minhaaltura,meupeso,resultadodoimc,alertadoimc);
 
-    // minhaaltura,minhaidade,meupeso,resultadodoimc,alertadoimc::
+    // dados_tabela.tab_altura = minhaaltura;
+    // dados_tabela.tab_idade = minhaidade;
+    // dados_tabela.tab_peso = meupeso;
+    // dados_tabela.tab_imc = resultadodoimc;
+    // dados_tabela.tab_alerta = alertadoimc;
 
-// const dados_tabela = {
-//     tab_altura:"",
-//     tab_idade:"",
-//     tab_peso:"",
-//     tab_imc:"",
-//     tab_alerta:""};
+    tabela.push(dados_tabela)
 
-
-
-
-
-// tabela.push({ dados_tabela: { tab_altura: string, tab_idade: string, tab_peso: string, tab_imc: string, tab_alerta: string, }, }[]): number;
-
-// tabela.push()
-
-// push(...items: { dados_tabela: { tab_altura: string; tab_idade: string; tab_peso: string; tab_imc: string; tab_alerta: string; }; }[]): number
-// New elements to add to the array.
+    console.log("versão 14 03 2023 23 01")
+    console.table(tabela);
+    console.table(dados_tabela)
+    console.log(length=length+1)
+    console.log("fim")
 
 
 
-
-// Appends new elements to the end of an array, and returns the new length of the array.
-
-dados_tabela.tab_altura = minhaaltura;
-dados_tabela.tab_idade = minhaidade;
-dados_tabela.tab_peso = meupeso;
-dados_tabela.tab_imc = resultadodoimc;
-dados_tabela.tab_alerta = alertadoimc;
-
-table_data.push(dados_tabela);
-
-
-
-console.table(table_data)
-
-
-
-    return minhaaltura,minhaidade,meupeso,resultadodoimc,alertadoimc;
 });
+
+
 
 
 
