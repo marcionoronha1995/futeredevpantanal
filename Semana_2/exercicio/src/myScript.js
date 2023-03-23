@@ -11,6 +11,8 @@ console.log("vai iniciar o código js")
 console.log("inicia obj_dados e array_tab")
     
 const obj_dados = {
+      ind_nome:"",
+      ind_cidade:"",
       ind_idade:"",
       ind_altura:"",
       ind_peso:"",
@@ -38,12 +40,16 @@ console.log("*********************************")
 console.log("dentro do click")
 console.log("recebendo os dados digitados idade, altura e peso")
 
+let obj_ind_nome = document.getElementById('nome').value 
+let obj_ind_cidade = document.getElementById('cidade').value 
 let obj_ind_idade = document.getElementById('age').value 
 let obj_ind_altura = document.getElementById('height').value
 let obj_ind_peso = document.getElementById('weight').value
 let obj_ind_imc
 let obj_ind_alerta 
 
+console.log("Nome........:",obj_ind_nome)
+console.log("Cidade........:",obj_ind_cidade)
 console.log("Idade........:",obj_ind_idade)
 console.log("Altura........:",obj_ind_altura)
 console.log("Peso..........:",obj_ind_peso)
@@ -93,6 +99,8 @@ switch(true){
   console.log("repassando os valores para os campos do objeto")
 
 
+    obj_dados.ind_nome=obj_ind_nome,  
+    obj_dados.ind_cidade=obj_ind_cidade, 
     obj_dados.ind_idade=obj_ind_idade,
     obj_dados.ind_altura=obj_ind_altura,
     obj_dados.ind_peso=obj_ind_peso,
@@ -101,7 +109,16 @@ switch(true){
 
 
     console.log("vai fazer o push do obj_dados no array_tab")
-    array_tab.push(obj_dados)
+    // array_tab.push(obj_dados)
+    array_tab[length] = {
+      ind_nome:obj_ind_nome,
+      ind_cidade:obj_ind_cidade,
+      ind_idade:obj_ind_idade,
+      ind_altura:obj_ind_altura,
+      ind_peso:obj_ind_peso,
+      ind_imc:obj_ind_imc,
+      ind_alerta:obj_ind_alerta}
+
     
     
     console.log("vai mostrar o obj_dados e array_tab dentro do click")
@@ -121,7 +138,11 @@ console.log("*********************************")
 
 console.log("talbez aqui deveria retornar os vou retornar os valores da função");
 
+// alert('Seu IMC é '+obj_ind_imc+' ,você está na faixa de '+obj_ind_alerta);
 
+
+alert('Olá meu nome é '+obj_ind_nome+' ,tenho '+obj_ind_idade+' anos, moro em '+obj_ind_cidade+',  meço '+obj_ind_altura+' cm, peso '+obj_ind_peso+' kg, meu IMC é de '+obj_ind_imc+'  e estou na faixa de '+obj_ind_alerta+'.')
+length++
 
 });
 
