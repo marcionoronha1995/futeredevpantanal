@@ -1,25 +1,28 @@
+const arraydados = [];
+const objdados = {peso:'',altura:''};
 
 function gravardados(){
 
-    function funcaogravar(Peso, Altura) {
-        this.Peso = Peso;
-        this.Altura = Altura;
-        
-      };
+  let pesod = document.getElementById('Peso').value;
+  let alturad = document.getElementById('Altura').value;
+  objdados.peso = pesod;
+  objdados.altura = alturad;
+  document.getElementById("texto0").innerHTML = "Dentro do js o Peso..."+pesod+"   Altura...."+alturad; 
+  console.log(pesod,alturad,"local ....01");
 
-    console.log("0001")
-    Peso = document.getElementById('Peso').value;
-    Altura = document.getElementById('Altura').value; 
+  // arraydados[length] = objdados; 
+  arraydados[length] = {peso:pesod,altura:alturad};
 
-    const indicetabela = new funcaogravar(Peso,Altura);
+  length++;
 
-    console.table(indicetabela);
-
-
-    document.getElementById("texto1").innerHTML = "Peso..."+Peso+"   Altura...."+Altura;  
-    
+    console.log("03......length = ",length);
+    document.getElementById("texto1").innerHTML = "Dentro da função o Peso..."+pesod+"   Altura...."+alturad;  
+    console.table(arraydados);
+    console.table(objdados);
+    return arraydados,objdados;    
 
 }
 
+console.log("fora da funcao gravadados......");
 
 
