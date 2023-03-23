@@ -23,7 +23,7 @@
 </body>
 <script>
   
-  console.log("vai iniciar o código js")
+  // console.log("vai iniciar o código js")
 
 
 // Não se preocupe em fazer um formulário, esta página já está funcional 
@@ -33,7 +33,7 @@ const calculate = document.getElementById('submit')
 // Crie a sua lógica a partir deste ponto
 
 // Adicione seu array aqui
-console.log("inicia obj_dados e array_tab")
+// console.log("inicia obj_dados e array_tab")
 
 const obj_dados = {
   ind_nome:"",
@@ -46,24 +46,24 @@ const obj_dados = {
 
 const array_tab = [];
 
-console.log("vai mostrar o obj_dados e array_tab dentro do click")
-console.table(obj_dados)
-console.table(array_tab)
+// console.log("vai mostrar o obj_dados e array_tab dentro do click")
+// console.table(obj_dados)
+// console.table(array_tab)
 
 calculate.addEventListener('click', () => {
-console.log("                                 ")
-console.log("*********************************")
-console.log("*********** inicio **************")
-console.log("**************do*****************")
-console.log("************click ***************")
-console.log("*********************************")
-// Esse document.getElementById, possui a informação dos inputs, capture ele utilizando uma variável
-// Exemplo: let minhaVar = document.getElementById
-// console.log(minhaVar) --> valor do document.getElement
-// MAKE - após fechar janela, limpar os valores e reiniciar os valores
+// console.log("                                 ")
+// console.log("*********************************")
+// console.log("*********** inicio **************")
+// console.log("**************do*****************")
+// console.log("************click ***************")
+// console.log("*********************************")
+// // Esse document.getElementById, possui a informação dos inputs, capture ele utilizando uma variável
+// // Exemplo: let minhaVar = document.getElementById
+// // console.log(minhaVar) --> valor do document.getElement
+// // MAKE - após fechar janela, limpar os valores e reiniciar os valores
 
-console.log("dentro do click")
-console.log("recebendo os dados digitados idade, altura e peso")
+// console.log("dentro do click")
+// console.log("recebendo os dados digitados idade, altura e peso")
 
 let obj_ind_nome = document.getElementById('nome').value 
 let obj_ind_cidade = document.getElementById('cidade').value 
@@ -73,21 +73,21 @@ let obj_ind_peso = document.getElementById('weight').value
 let obj_ind_imc
 let obj_ind_alerta 
 
-console.log("Nome........:",obj_ind_nome)
-console.log("Cidade........:",obj_ind_cidade)
-console.log("Idade........:",obj_ind_idade)
-console.log("Altura........:",obj_ind_altura)
-console.log("Peso..........:",obj_ind_peso)
+// console.log("Nome........:",obj_ind_nome)
+// console.log("Cidade........:",obj_ind_cidade)
+// console.log("Idade........:",obj_ind_idade)
+// console.log("Altura........:",obj_ind_altura)
+// console.log("Peso..........:",obj_ind_peso)
 
-console.log("vai calcular o valor do imc")
+// console.log("vai calcular o valor do imc")
 
 obj_ind_altura = obj_ind_altura/100
 obj_ind_imc = obj_ind_peso / (obj_ind_altura*obj_ind_altura)
 obj_ind_imc = parseFloat(obj_ind_imc.toFixed(1))
 
-console.log("Valor do IMC .........:",obj_ind_imc)
+// console.log("Valor do IMC .........:",obj_ind_imc)
 
-console.log("vai descobrir o alerta do imc")
+// console.log("vai descobrir o alerta do imc")
 
 switch(true){
 case (obj_ind_imc >= 0 && obj_ind_imc <= 16):
@@ -117,11 +117,11 @@ case (obj_ind_imc >= 40):
 
 }
 
-console.log("Alerta do IMC........:",obj_ind_alerta)
+// console.log("Alerta do IMC........:",obj_ind_alerta)
 
 
-console.log("dados digitados .... "," idade "+obj_ind_idade," altura "+obj_ind_altura," peso "+obj_ind_peso," IMC "+obj_ind_imc," alerta "+obj_ind_alerta)  
-console.log("repassando os valores para os campos do objeto")
+// console.log("dados digitados .... "," idade "+obj_ind_idade," altura "+obj_ind_altura," peso "+obj_ind_peso," IMC "+obj_ind_imc," alerta "+obj_ind_alerta)  
+// console.log("repassando os valores para os campos do objeto")
 
 
 obj_dados.ind_nome=obj_ind_nome,  
@@ -133,7 +133,7 @@ obj_dados.ind_imc=obj_ind_imc,
 obj_dados.ind_alerta=obj_ind_alerta
 
 
-console.log("vai fazer o push do obj_dados no array_tab")
+// console.log("vai fazer o push do obj_dados no array_tab")
 // array_tab.push(obj_dados)
 array_tab[length] = {
   ind_nome:obj_ind_nome,
@@ -146,22 +146,22 @@ array_tab[length] = {
 
 
 
-console.log("vai mostrar o obj_dados e array_tab dentro do click")
-console.table(obj_dados)
+// console.log("vai mostrar o obj_dados e array_tab dentro do click")
+// console.table(obj_dados)
 console.table(array_tab)
 
 
 
 
 
-console.log("                                 ")
-console.log("*********************************")
-console.log("*********** fim    **************")
-console.log("**************do*****************")
-console.log("************click ***************")
-console.log("*********************************")
+// console.log("                                 ")
+// console.log("*********************************")
+// console.log("*********** fim    **************")
+// console.log("**************do*****************")
+// console.log("************click ***************")
+// console.log("*********************************")
 
-console.log("talbez aqui deveria retornar os vou retornar os valores da função");
+// console.log("talbez aqui deveria retornar os vou retornar os valores da função");
 
 // alert('Seu IMC é '+obj_ind_imc+' ,você está na faixa de '+obj_ind_alerta);
 
