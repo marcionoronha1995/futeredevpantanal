@@ -20,25 +20,26 @@ let palavra;
 // console.log("...."+array.length,"...."+str1.length,"...."+palavra)
 let i=0;
 array.forEach(element => {
-    console.log("Posiçã do array................."+i);
-    console.log("interando o array...............");
+    // console.log("Posiçã do array................."+i);
+    // console.log("interando o array...............");
     count = array[i].length
  
         if(maiorpalavra.length < count){
             maiorpalavra = array[i];
-            console.log("no if a maior palavra é "+maiorpalavra);
+            // console.log("no if a maior palavra é "+maiorpalavra);
         };
         if(menorpalavra.length > count){
             menorpalavra = array[i];
-            console.log("no if a menor palavra é "+menorpalavra);
+            // console.log("no if a menor palavra é "+menorpalavra);
         };
-        console.log("palavra..."+array[i],"contador..."+count,"menor palavra..."+menorpalavra,"maior palavra..."+maiorpalavra);
+        // console.log("palavra..."+array[i],"contador..."+count,"menor palavra..."+menorpalavra,"maior palavra..."+maiorpalavra);
         i++;
 
         
 
 });
 console.log("...............Primeira interação com array...................");
+console.log(array)
 console.log("Resultado final desta interação...ARRAY...");
 console.log("a menor palavra é :",menorpalavra);
 console.log("a maior palavra é :",maiorpalavra);
@@ -48,25 +49,26 @@ console.log("..............................................................");
 
 i=0;
 array1.forEach(element => {
-    console.log("Posiçã do array................."+i);
-    console.log("interando o array...............");
+    // console.log("Posiçã do array................."+i);
+    // console.log("interando o array...............");
     count = array1[i].length
  
         if(maiorpalavra.length < count){
             maiorpalavra = array1[i];
-            console.log("no if a maior palavra é "+maiorpalavra);
+            // console.log("no if a maior palavra é "+maiorpalavra);
         };
         if(menorpalavra.length > count){
             menorpalavra = array1[i];
-            console.log("no if a menor palavra é "+menorpalavra);
+            // console.log("no if a menor palavra é "+menorpalavra);
         };
-        console.log("palavra..."+array1[i],"contador..."+count,"menor palavra..."+menorpalavra,"maior palavra..."+maiorpalavra);
+        // console.log("palavra..."+array1[i],"contador..."+count,"menor palavra..."+menorpalavra,"maior palavra..."+maiorpalavra);
         i++;
 
         
 
 });
 console.log("...............Segunda interação com array...................")
+console.log(array1)
 console.log("Resultado final desta interação...ARRAY1...")
 console.log("a menor palavra é :",menorpalavra);
 console.log("a maior palavra é :",maiorpalavra);
