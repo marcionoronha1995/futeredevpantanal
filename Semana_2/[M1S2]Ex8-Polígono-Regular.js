@@ -11,46 +11,58 @@ const calculate = document.getElementById('submit');
 
 
 const inf1 = document.getElementById('numerolados').value; 
-const numerolado = document.getElementById('numerolados').value; 
+const inf2 = document.getElementById('medidadolado').value; 
 let poligono
+let area
+
 
 calculate.addEventListener('click', () => {   
 
 
-    const inf1 = document.getElementById('numerolados').value; 
+    const inf1 = document.getElementById('numerolados').value;
+    const inf2 = document.getElementById('medidadolado').value; 
     const key = inf1;
+
+    const area = ((Math.pow(inf2,2)*inf1)/(4*Math.tan(Math.PI/inf1)));
+
 
     // console.log("sw inf 1 .."+" "+inf1+" "+numerolado);
 
     switch (key) {
 
         case "3":
-            console.log("case 3")                
+            // console.log("case 3")                
             // Se o número de lados for igual a 3 apresentar no console "triângulo" e o valor da área
  
                 // console.log("número de lados "+inf1);
-                console.log("triângulo")
-                poligono = "\<br>\...é um polígono de "+numerolado+" lados."
-                document.getElementById("html1").innerHTML=("valor de numerolado "+inf1+poligono);
+                console.log("triângulo com uma área de "+area)
+                areapoligono = ("com área de "+area);
+                poligono = "\<br>\...é um polígono de "+key+" lados. Um triângulo,";
+                document.getElementById("html1").innerHTML=("número de lados "+key+poligono+areapoligono);
 
             break;    
         case "4":
-            console.log("case 4")                // Se o número de lados for igual a 4 apresentar no console "quadrado" e o valor da área.
+            // console.log("case 4")                // Se o número de lados for igual a 4 apresentar no console "quadrado" e o valor da área.
                 // console.log("número de lados "+inf1);
-                console.log("quadrado")
-                poligono = "\<br>\...é um polígono de "+inf1+" lados."
-                document.getElementById("html1").innerHTML=("valor de numerolado "+inf1+poligono);
+                console.log("quadrado com uma área de "+area)
+                areapoligono = ("com área de "+area);
+                poligono = "\<br>\...é um polígono de "+key+" lados. Um quadrado."
+                document.getElementById("html1").innerHTML=("número de lados "+key+poligono+areapoligono);
             break;
         case "5":
-            console.log("case 5")                // Se o número de lados for igual a 5 apresentar no console "pentágono" e o valor da área.
+            // console.log("case 5")                // Se o número de lados for igual a 5 apresentar no console "pentágono" e o valor da área.
                 // console.log("número de lados "+inf1);
-                console.log("pentágono")
-                poligono = "\<br>\...é um polígono de "+inf1+" lados."
-                document.getElementById("html1").innerHTML=("valor de numerolado "+inf1+poligono);
+                console.log("pentágono, com uma área de "+area)
+                areapoligono = ("com área de "+area);
+                poligono = "\<br>\...é um polígono de "+key+" lados. Um pentágono."
+                document.getElementById("html1").innerHTML=("número de lados "+key+poligono+areapoligono);
+            break;
+        case key >> "5":
+            console.log("fora do range...");
             break;
         default:                
-                poligono = "\<br>...Não é um polígono";
-                document.getElementById("html1").innerHTML=("valor de numerolado "+inf1+poligono);
+                poligono = "\<br>...Não é um polígono, não para este programa";
+                document.getElementById("html1").innerHTML=("número de lados "+inf1+poligono);
                 break;
     }
 
