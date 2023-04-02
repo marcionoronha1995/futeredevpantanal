@@ -5,10 +5,10 @@ ordenadorArray
 conversorReais
 
 function executar(){
-    conversorCPF;
-    ordenadorArray;
-    conversorReais;
+    conversorCPF();
+    ordenadorArray();
+    conversorReais();
 
 }
 
-executar()
+executar();
