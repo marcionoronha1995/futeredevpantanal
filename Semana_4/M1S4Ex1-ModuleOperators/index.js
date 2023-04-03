@@ -4,7 +4,7 @@ conversorCPF
 ordenadorArray
 conversorReais
 
-function executar(){
+const executar = () => {
     conversorCPF();
     ordenadorArray();
     conversorReais();
