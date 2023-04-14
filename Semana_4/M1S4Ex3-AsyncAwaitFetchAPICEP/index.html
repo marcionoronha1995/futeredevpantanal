@@ -3,51 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-    <script src="index.js"></script>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
 
-  
-<h3>A demonstration of how to access a Date field</h3>
+    <h4>Informe o CEP</h4>
+    
+    <input type="number" id="informadoCEP" name="informadoCEP">
+    <label for="CEPnum">Informe somente números</label><br><p></p>
+    <input type="button" value="GravarCEP" onclick="informeCEP()">
 
-<input type="date" id="myDate" value="2014-02-09">
+    <h4>Dados do endereço do CEP</h4>
 
-<p>Click the button to get the date of the date field.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p><strong>Note:</strong> input elements with type="date" do not show as any date field/calendar in IE 11 and earlier versions.</p>
-
-<p id="demo"></p>
+    <p id="CEPinformado"></p>
 
 
 
-
-    <div class="w3-container">
-        <h2>Input Card</h2>
-        
-        <div class="w3-card-4">
-          <div class="w3-container w3-green">
-            <h2>Informe o CEP 88053050</h2>
-          </div>
-      
-          <form class="w3-container">
-            <p>
-            <input class="w3-input" type="number" id="CEPinformado" name="CEPinformado">
-            <label>Informe somente números</label></p>
-            <p>   
-              <button onclick="imprimeCEP()">Submite</button><p></p>
-            <p id="texto"></p>  
-
-          </form>
-        </div>
-      </div>
-
-
+    <script src="script.js"></script>
 </body>
 </html>
