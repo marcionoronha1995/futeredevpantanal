@@ -10,16 +10,39 @@
 // Documentação: https://brasilapi.com.br/
 
 
-
-
-
-
-
-
 function informeCEP(){
     console.log("informe o cep function");
     let infCEP = document.getElementById("informadoCEP").value;
     console.log(infCEP);
     document.getElementById("CEPinformado").innerHTML = infCEP;
+    console.log("https://brasilapi.com.br/api/cep/v2/"+infCEP)
     
 };
+
+// resultado 
+// {
+//     "name":"CepPromiseError",
+//     "message":"Todos os serviços de CEP retornaram erro.",
+//     "type":"service_error",
+//     "errors":
+//     [{
+//         "name":"ServiceError",
+//         "message":"CEP NAO ENCONTRADO",
+//         "service":"correios"},
+//         {
+//             "name":"ServiceError",
+//             "message":"Erro ao se conectar com o serviço ViaCEP.",
+//             "service":"viacep"
+//         },
+//         {
+//             "name":"ServiceError",
+//             "message":"Erro ao se conectar com o serviço WideNet.",
+//             "service":"widenet"
+//         },
+//         {
+//             "name":"ServiceError",
+//             "message":"CEP não encontrado na base dos Correios.",
+//             "service":"correios-alt"
+//         }
+//     ]
+// }
