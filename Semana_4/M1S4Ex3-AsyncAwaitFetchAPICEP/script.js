@@ -14,8 +14,22 @@ function informeCEP(){
     console.log("informe o cep function");
     let infCEP = document.getElementById("informadoCEP").value;
     console.log(infCEP);
-    document.getElementById("CEPinformado").innerHTML = infCEP;
+    
     console.log("https://brasilapi.com.br/api/cep/v2/"+infCEP)
+    let infCEPapi = "https://brasilapi.com.br/api/cep/v2/"+infCEP
+    console.log("este é o valor a ser buscado ",infCEPapi)
+
+    let CEParray = []
+
+    fetch(infCEPapi)
+    // Tratamento do sucesso
+    .then(response => response.json())  // converter para json
+    .then(json => console.log(json))    //imprimir dados no console
+    .then(json => CEParray = json)
+    .catch(err => console.log('Erro de solicitação', err)); // lidar com os erros por catch
+
+    document.getElementById("CEPinformado").innerHTML = infCEP;
+    document.getElementById("CEParray").innerHTML = CEParray+" CEParray";
     
 };
 
