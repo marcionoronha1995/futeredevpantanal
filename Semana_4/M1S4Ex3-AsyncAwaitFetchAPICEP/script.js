@@ -19,17 +19,35 @@ function informeCEP(){
     let infCEPapi = "https://brasilapi.com.br/api/cep/v2/"+infCEP
     console.log("este é o valor a ser buscado ",infCEPapi)
 
-    let CEParray = []
+    const CEPobject= {cep:"",cidade:"",estado:""}
+    console.log(" cep valor CEP Objeto ... ",CEPobject)
 
-    fetch(infCEPapi)
-    // Tratamento do sucesso
+    fetch(infCEPapi)    // Tratamento do sucesso
     .then(response => response.json())  // converter para json
-    .then(json => console.log(json))    //imprimir dados no console
-    .then(json => CEParray = json)
+    .then(json => CEPobject = json)
+    // .then(json => CEPobject.cidade = json.city)
+    // .then(json => CEPobject.estado = json.state)
+    // .then(json => console.log("Valor do CEP em Fetch:.....    ",json.cep))    //imprimir dados no console
+    // .then(json => console.log("State:...    ",json.state))    //imprimir dados no console
+    // .then(json => console.log("Estado: ",json.state)) 
+    // .then(json => console.log("Cidade: ",json.city)) 
+    .then(json => document.getElementById("CEPjson").innerHTML = json)
+    // .then(json => CEPobject.cep = json.cep)
     .catch(err => console.log('Erro de solicitação', err)); // lidar com os erros por catch
 
+
+//     "cep": "89010025",
+//     "state": "SC",
+//     "city": "Blumenau",
+
+
+
     document.getElementById("CEPinformado").innerHTML = infCEP;
-    document.getElementById("CEParray").innerHTML = CEParray+" CEParray";
+    document.getElementById("CEPdados").innerHTML = `${CEPobject}... Valor do CEP `;
+    console.log("CEP "+CEPobject.cep+'\br'+"Estado: "+CEPobject.estado)
+  
+    
+
     
 };
 
