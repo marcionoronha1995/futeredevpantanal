@@ -11,28 +11,24 @@
 
 
 function informeCEP(){
-    console.log("informe o cep function");
+    console.log("Dentro da function informeCEP");
     let infCEP = document.getElementById("informadoCEP").value;
     console.log(infCEP);
     
-    console.log("https://brasilapi.com.br/api/cep/v2/"+infCEP)
+    console.log("Link para acessar API :","https://brasilapi.com.br/api/cep/v2/"+infCEP)
     let infCEPapi = "https://brasilapi.com.br/api/cep/v2/"+infCEP
     console.log("este é o valor a ser buscado ",infCEPapi)
 
     const CEPobject= {cep:"",cidade:"",estado:""}
-    console.log(" cep valor CEP Objeto ... ",CEPobject)
+    // console.log(" cep valor CEP Objeto ... ",CEPobject)
+
+    const objetoCEP = {}
+
+
 
     fetch(infCEPapi)    // Tratamento do sucesso
     .then(response => response.json())  // converter para json
-    .then(json => CEPobject = json)
-    // .then(json => CEPobject.cidade = json.city)
-    // .then(json => CEPobject.estado = json.state)
-    // .then(json => console.log("Valor do CEP em Fetch:.....    ",json.cep))    //imprimir dados no console
-    // .then(json => console.log("State:...    ",json.state))    //imprimir dados no console
-    // .then(json => console.log("Estado: ",json.state)) 
-    // .then(json => console.log("Cidade: ",json.city)) 
-    .then(json => document.getElementById("CEPjson").innerHTML = json)
-    // .then(json => CEPobject.cep = json.cep)
+    .then(json => console.log("arquivo json ",json))
     .catch(err => console.log('Erro de solicitação', err)); // lidar com os erros por catch
 
 
@@ -41,13 +37,14 @@ function informeCEP(){
 //     "city": "Blumenau",
 
 
+    // document.getElementById("CEPinformado").innerHTML = infCEP;
+    // document.getElementById("CEPdados").innerHTML = `${CEPobject.cep}... Valor do CEP `;
+    // console.log("CEP "+CEPobject.cep+'\br'+"Estado: "+CEPobject.estado)
 
-    document.getElementById("CEPinformado").innerHTML = infCEP;
-    document.getElementById("CEPdados").innerHTML = `${CEPobject}... Valor do CEP `;
-    console.log("CEP "+CEPobject.cep+'\br'+"Estado: "+CEPobject.estado)
-  
-    
+    // console.log("manipulando o json")
 
+
+ 
     
 };
 
