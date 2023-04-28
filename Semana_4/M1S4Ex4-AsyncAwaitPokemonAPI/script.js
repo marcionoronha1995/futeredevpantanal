@@ -14,13 +14,40 @@
 // Se tivermos falha na requisição, devemos consolar  a mensagem de erro e retornar esse resultado.
 // Documentação: https://pokeapi.co/
 
-
+const objPokemon = {
+  "id":"",
+  "name":"",
+  "hp":"",
+  "attack": "",
+  "defense": "",
+  "special-attack": "",
+  "special-defense": "",
+  "speed": "",
+}
 async function pesquisaPokemon() {
-    const infCEP = document.getElementById("nomePokemon").value;
-    const response = await fetch("https://brasilapi.com.br/api/cep/v2/"+infCEP);
-    const jsonData = await response.json();
-    console.log(jsonData); 
+  const endpoint = document.getElementById("nomePokemon").value;
+  const response = await fetch("https://pokeapi.co/api/v2/pokemon/"+endpoint);
+  const jsonData = await response.json();
+  console.log(jsonData);
+  document.getElementById("NomedoPokemon").innerHTML = `Nome do Pokemon: ${jsonData.name}`;
+  document.getElementById("IddoPokemon").innerHTML = `Nome do Pokemon: ${jsonData.id}`;
+
+  console.log("estou na função principal valor do endpoint ", endpoint);
+
+  pesquisaHPPokemon();
 
   };
 
-  pesquisaPokemon();
+  async function pesquisaHPPokemon() {
+
+    const endpoint = document.getElementById("nomePokemon").value;
+    console.log("dentro do pesquisa HP, valor do endpoint ",endpoint)
+    const response = await fetch("https://pokeapi.co/api/v2/characteristic/"+endpoint);
+    const jsonData = await response.json();
+    console.log(jsonData);
+    document.getElementById("HPdoPokemon").innerHTML = `HP do Pokemon: ${jsonData.highest_stat.url+endpoint}`;
+
+
+
+  };
+
