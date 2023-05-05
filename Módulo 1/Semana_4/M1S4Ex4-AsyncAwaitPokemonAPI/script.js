@@ -29,10 +29,11 @@ async function pesquisaPokemon() {
   const response = await fetch("https://pokeapi.co/api/v2/pokemon/"+endpoint);
   const jsonData = await response.json();
   console.log(jsonData);
-  document.getElementById("NomedoPokemon").innerHTML = `Nome do Pokemon: ${jsonData.name}`;
-  document.getElementById("IddoPokemon").innerHTML = `Nome do Pokemon: ${jsonData.id}`;
+  document.getElementById("NomedoPokemon").innerHTML = `Nome do Pokemon: ${objPokemon.name = jsonData.name}`;
+  document.getElementById("IddoPokemon").innerHTML = `Nome do Pokemon: ${objPokemon.id = jsonData.id}`;
 
   console.log("estou na função principal valor do endpoint ", endpoint);
+  console.log("objeto Pokemon ",objPokemon);
 
   pesquisaHPPokemon();
 
